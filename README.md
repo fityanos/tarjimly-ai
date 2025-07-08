@@ -1,9 +1,3 @@
-# Tarjimly
-
-Tarjimly is the Arabic word for "translate for me". This project provides a simple command-line translation tool powered by OpenAI GPT.
-
----
-
 ## What's inside
 
 ```bash
@@ -22,17 +16,19 @@ Tarjimly is the Arabic word for "translate for me". This project provides a simp
 ---
 
 ## How it works
-- The CLI sends translation requests directly to OpenAI using your own API key (set OPENAI_API_KEY in your .env file).
-- No proxy server is required; all requests are made from your local machine to OpenAI.
-
+- The CLI sends translation requests directly to OpenAI using your own API key.
+- Developer Experience
+  - ISO 639-1 language code to language name mapping is included for easiness. You can use lang_code or lang_name
+  - CaseSsensitive iS HanDled
+  - "Quoted" and unquoted search words
 ---
 
-## Setup
+## Setup for local CLI usage
 
 1. **Clone the repo and install dependencies:**
    ```sh
    git clone <your-repo-url>
-   cd tarjimly
+   cd tarjimly-ai
    npm install
    ```
 2. **Set up your `.env` file:**
@@ -45,23 +41,38 @@ Tarjimly is the Arabic word for "translate for me". This project provides a simp
      OPENAI_API_KEY=sk-...
      ```
 
-## How to Run
+## Setup as npm Package
 
 > **Tip:** For easy access, install globally:
 > ```sh
-> npm install -g .
+> npm i tarjimly -g
 > ```
 > Or use `npx` if published to npm.
 
-Run the CLI:
+## Run the CLI:
 ```sh
-tarjimly "hello world" english italian --ai
+tarjimly hello world english italian --ai
 ```
 Or, for local development:
 ```sh
-node src/index.js "hello world" english italian --ai
+node src/index.js hello world english italian --ai
 ```
 - **Multi-word statements:** You can enter the text to translate with or without quotes. The CLI will always treat the last two arguments as the source and target languages, and everything before as the text to translate.
+
+### Environment Variables
+
+This package requires an OpenAI API key.
+
+1. Create a `.env` file in your project root with:
+   ```
+   OPENAI_API_KEY=your-openai-key-here
+   ```
+2. Or set the variable in your shell:
+   ```sh
+   export OPENAI_API_KEY=your-openai-key-here
+   ```
+
+If `OPENAI_API_KEY` is not set, the CLI will show an error and exit.
 
 ## How to Test
 
