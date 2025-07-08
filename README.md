@@ -56,8 +56,7 @@
      OPENAI_API_KEY=sk-...
      ```
 
-
-- **Multi-word statements:** You can enter the text to translate with or without quotes. The CLI will always treat the last two arguments as the source and target languages, and everything before as the text to translate.
+---
 
 ### Environment Variables
 
