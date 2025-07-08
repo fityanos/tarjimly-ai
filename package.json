@@ -1,0 +1,33 @@
+{
+  "name": "tarjimly",
+  "version": "2.0.0",
+  "description": "Tarjimly is the Arabic word for `Translate for Me`. Simple command-line for translation build using OPENAI",
+  "bin": "src/index.js",
+  "keywords": [
+    "translate",
+    "translation",
+    "languages"
+  ],
+  "type": "module",
+  "author": "Anas Fitiani",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "5.0.1",
+    "dotenv": "^17.0.1",
+    "openai": "^5.8.2",
+    "yargs": "17.5.1"
+  },
+  "repository": {
+    "url": "https://github.com/fityanos/tarjimly-ai"
+  },
+  "bugs": {
+    "url": "https://github.com/fityanos/tarjimly-ai/issues"
+  },
+  "homepage": "https://github.com/fityanos/tarjimly-ai#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  }
+}
