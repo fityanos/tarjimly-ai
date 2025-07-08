@@ -1,6 +1,6 @@
 {
-  "name": "tarjimly-ai",
-  "version": "2.0.2",
+  "name": "tarjimly",
+  "version": "2.0.1",
   "description": "Tarjimly is the Arabic word for `Translate for Me`. Simple command-line for translation build using OPENAI",
   "bin": "src/index.js",
   "keywords": [
