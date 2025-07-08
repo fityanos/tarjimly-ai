@@ -23,7 +23,22 @@
   - "Quoted" and unquoted search words
 ---
 
-## Setup for local CLI usage
+ ## Installation
+   Install globally for CLI usage:
+   ```sh
+   npm install -g tarjimly
+   ```
+   Run the CLI:
+   ```sh
+   tarjimly hello world english italian --ai
+   ```
+   Or use with npx:
+   ```sh
+   npx tarjimly hello world english italian --ai
+   ```
+---
+
+  ## Setup for local CLI usage
 
 1. **Clone the repo and install dependencies:**
    ```sh
@@ -41,22 +56,7 @@
      OPENAI_API_KEY=sk-...
      ```
 
-## Setup as npm Package
 
-> **Tip:** For easy access, install globally:
-> ```sh
-> npm i tarjimly -g
-> ```
-> Or use `npx` if published to npm.
-
-## Run the CLI:
-```sh
-tarjimly hello world english italian --ai
-```
-Or, for local development:
-```sh
-node src/index.js hello world english italian --ai
-```
 - **Multi-word statements:** You can enter the text to translate with or without quotes. The CLI will always treat the last two arguments as the source and target languages, and everything before as the text to translate.
 
 ### Environment Variables
