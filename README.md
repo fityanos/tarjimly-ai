@@ -1,4 +1,10 @@
-## What's inside
+# Tarjimly Translator CLI
+
+A simple and powerful CLI tool for translating text using Tarjimly’s translation services.
+
+---
+
+## What's Inside
 
 ```bash
 ├── bin
@@ -15,50 +21,17 @@
 
 ---
 
-## How it works
+## How It Works
+
 - The CLI sends translation requests directly to OpenAI using your own API key.
 - Developer Experience
   - ISO 639-1 language code to language name mapping is included for easiness. You can use lang_code or lang_name
   - CaseSsensitive iS HanDled
   - "Quoted" and unquoted search words
----
-
- ## Installation
-   Install globally for CLI usage:
-   ```sh
-   npm install -g tarjimly
-   ```
-   Run the CLI:
-   ```sh
-   tarjimly hello world english italian --ai
-   ```
-   Or use with npx:
-   ```sh
-   npx tarjimly hello world english italian --ai
-   ```
----
-
-  ## Setup for local CLI usage
-
-1. **Clone the repo and install dependencies:**
-   ```sh
-   git clone <your-repo-url>
-   cd tarjimly-ai
-   npm install
-   ```
-2. **Set up your `.env` file:**
-   - Copy `.env.example` to `.env`:
-     ```sh
-     cp .env.example .env
-     ```
-   - Add your OpenAI API key:
-     ```
-     OPENAI_API_KEY=sk-...
-     ```
 
 ---
 
-### Environment Variables
+## Environment Variables
 
 This package requires an OpenAI API key.
 
@@ -73,14 +46,38 @@ This package requires an OpenAI API key.
 
 If `OPENAI_API_KEY` is not set, the CLI will show an error and exit.
 
-## How to Test
+---
 
-Run the test suite:
-```sh
-npm test
+## Install
+
+You can use the package in two ways:
+
+### Option 1: Install via npm (Globally)
+
+```bash
+npm install -g tarjimly
+```
+This makes the tarjimly command available anywhere in your terminal.
+
+
+### Option 2: Clone the GitHub Repository
+
+```bash
+git clone https://github.com/fityanos/tarjimly-ai.git
+cd tarjimly-ai
+npm install
+```
+Then run the CLI with:
+
+```bash
+node src/index.js "Hello World!" english arabic --ai
 ```
 
----
+## How to Test
+
+```bash
+npm test
+```
 
 ## License
 MIT
